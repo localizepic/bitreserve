@@ -93,7 +93,6 @@ class BitreserveApi {
     private function getData($headers = array(), $post_data = array()) {
         
         $apiURL = $this->requestUrl;
-        $post   = $this->postData;
         
         $default_headers = array();
         
