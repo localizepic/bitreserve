@@ -109,12 +109,8 @@ class BitreserveApi {
         curl_setopt($ch, CURLOPT_HTTPHEADER, $all_headers);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
         curl_setopt($ch, CURLOPT_TIMEOUT, 30);
-        
-        // check for post data
-        if (!empty($post_data)) {           
-            curl_setopt($ch, CURLOPT_POST, 1);
-            curl_setopt($ch, CURLOPT_POSTFIELDS, $post_data);        
-        }
+        curl_setopt($ch, CURLOPT_POST, count($post_data));
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $post_data);        
         
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false); // just for test don't check cert
         
