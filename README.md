@@ -1,4 +1,4 @@
-bitreserve
+Bitreserve
 ==========
 
 Bitreserve PHP SDK for Bitreserve API v0
